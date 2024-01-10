@@ -32,19 +32,20 @@ const FormLogin = () => {
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
   };
-return <Form
-  className='bg-blue-100 rounded p-2 '
+return (
+  <div className='mt-10'>
+   <Form
+  className='bg-blue-100 rounded p-2 containerCss'
   layout='vertical'
     name="basic"
     //Cột label
     labelCol={{
-      
       span: 16,
     }}
     //Cột input
     wrapperCol={{
-      offset: 2,
-      span: 20,
+      offset: 0,
+      span: 24,
     }}
     //Set width
     style={{
@@ -97,7 +98,11 @@ return <Form
         Đăng nhập
       </Button>
     </Form.Item>
-  </Form>
+  </Form> 
+  </div>
+
+)
+
 }
  
 ;
