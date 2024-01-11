@@ -35,7 +35,7 @@ export default function HeaderFlix() {
   }
   return (
     <div className='h-20'>
-      <div className='h-20 flex justify-between items-center px-4 shadow-xl fixed z-10 w-full'>
+      <div className='h-20 flex justify-between items-center px-4 shadow-xl fixed z-10 bg-white w-full'>
         <NavLink to={"/"} className='text-3xl font-bold text-blue-500'>CyberFlix</NavLink>
 
         <div className='space-x-3'>{renderMenu()}</div>
