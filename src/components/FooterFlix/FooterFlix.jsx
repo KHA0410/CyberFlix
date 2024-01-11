@@ -17,10 +17,10 @@ export default function FooterFlix() {
     }
 
     return (
-        <footer className='footerHome pb-5 lg:px-10' style={{background: "#212121"}}>
+        <footer className='footerHome pb-5 lg:px-10'>
             <div className='footer__content containerCss'>
                 <div className='footer__top grid grid-cols-12 py-4'>
-                    <div className='footerTop__item col-span-4 sm:col-span-12'>
+                    <div className='footerTop__item col-span-4 md:col-span-12'>
                         <h2 className='item__title'>TIX</h2>
                         <div className='item__child grid grid-cols-2'>
                             <p className='child__text mb-2'>FAQ</p>
@@ -29,13 +29,13 @@ export default function FooterFlix() {
                             <p className='child__text mb-2'>Privacy policy</p>
                         </div>
                     </div>
-                    <div className='footerTop__item col-span-4 sm:col-span-12'>
+                    <div className='footerTop__item col-span-4 md:col-span-12'>
                         <h2 className='item__title'>PARTNERS</h2>
-                        <div className='item__child grid grid-cols-4 sm:grid-cols-8'>
+                        <div className='item__child grid grid-cols-4 md:grid-cols-10 sm:grid-cols-8'>
                             {renderLogos()}
                         </div>
                     </div>
-                    <div className='footerTop__item col-span-2 sm:col-span-6'>
+                    <div className='footerTop__item col-span-2 md:col-span-6'>
                         <h2 className='item__title'>MOBILE APP</h2>
                         <div className='item__child flex gap-3'>
                             <a className='child__element'>
@@ -46,7 +46,7 @@ export default function FooterFlix() {
                             </a>
                         </div>
                     </div>
-                    <div className='footerTop__item col-span-2 sm:col-span-6'>
+                    <div className='footerTop__item col-span-2 md:col-span-6'>
                         <h2 className='item__title'>SOCIAL</h2>
                         <div className='item__child flex gap-3'>
                             <a className='child__element'>
@@ -60,10 +60,10 @@ export default function FooterFlix() {
                 </div>
                 <hr className='footer__line bg-white h-px' />
                 <div className='footer__bottom grid grid-cols-12 py-8'>
-                    <div className='footerBottom__item col-span-2 sm:col-span-12 sm:justify-self-center sm:mb-3' style={{ width: "100px" }}>
+                    <div className='footerBottom__item col-span-2 md:col-span-3 md:justify-self-center sm:col-span-12 sm:mb-3' style={{ width: "100px" }}>
                         <img src='./img/zion.jpeg' alt='logo' />
                     </div>
-                    <div className='footerBottom__item col-span-8 sm:col-span-12 sm:my-5 md:text-center'>
+                    <div className='footerBottom__item col-span-8 md:col-span-6 md:justify-self-center md:text-center sm:col-span-12 sm:my-5'>
                         <h2 className='item__title'>TIX - SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</h2>
                         <p className='item__text pt-3'>
                             Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, quận 7, Tp. Hồ Chí Minh, Việt Nam.
@@ -75,7 +75,7 @@ export default function FooterFlix() {
                             Số Điện Thoại (Hotline): 1900 545 436
                         </p>
                     </div>
-                    <div className='footerBottom__item col-span-2 sm:col-span-12 sm:justify-self-center' style={{ width: "100px" }}>
+                    <div className='footerBottom__item col-span-2 md:col-span-3 md:justify-self-center sm:col-span-12' style={{ width: "100px" }}>
                         <img src='./img/logo-check.png' alt='logo' />
                     </div>
                 </div>
