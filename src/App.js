@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./Pages/HomePage/HomePage";
 import HeaderFlix from "./components/HeaderFlix/HeaderFlix";
 import DettailPage from "./Pages/DetailPage/DettailPage";
+import FooterFlix from "./components/FooterFlix/FooterFlix";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/detail/:maPhim" element={<DettailPage />} />
         </Routes>
+        <FooterFlix />
       </BrowserRouter>
     </div>
   );
