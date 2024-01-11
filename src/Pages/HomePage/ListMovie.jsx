@@ -8,7 +8,7 @@ export default function ListMovie() {
     const [movieArr, setMovieArr] = useState([])
     //Lấy ds phim
     useEffect(() => {
-        https.get("/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01")
+        https.get("/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP09")
         .then((res) => {
          console.log(res.data.content);
          setMovieArr(res.data.content)
@@ -23,6 +23,7 @@ export default function ListMovie() {
             return(
                 //Dùng card antd
                 <Card
+                key={item.maPhim}
                 hoverable
                 style={{
                   width: "100%",
