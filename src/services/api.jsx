@@ -1,4 +1,6 @@
 import axios from "axios";
+import { store } from "..";
+import { setLoadingOff, setLoadingOn } from "../redux/spinnerSlice/spinnerSlice";
 
 export const https = axios.create({
     baseURL: "https://movienew.cybersoft.edu.vn",
@@ -10,6 +12,7 @@ export const https = axios.create({
 // Add a request interceptor
 https.interceptors.request.use(function (config) {
     // Do something before request is sent
+    store.dispatch(setLoadingOn());
     console.log("request sent");
     return config;
   }, function (error) {
@@ -21,6 +24,7 @@ https.interceptors.request.use(function (config) {
 https.interceptors.response.use(function (response) {
     // Any status code that lie within the range of 2xx cause this function to trigger
     // Do something with response data
+    store.dispatch(setLoadingOff());
     console.log("response returned");
     return response;
   }, function (error) {

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import { RingLoader } from "react-spinners"
 
 // todo: style spinner 
@@ -16,10 +17,15 @@ const styleSpinner = {
 };
 
 export default function Spinner() {
-  
+  let { isLoading } = useSelector((state) => state.spinnerSlice);
+
+  // use ternary operator to render spinner 
+  // if isLoading = true => spinner will be rendered 
   return (
-    <div style={styleSpinner}>
+    isLoading ? (
+      <div style={styleSpinner}>
         <RingLoader color="#3B82F6" size={100} />
-    </div>
+      </div>
+    ) : (<></>)
   );
 }

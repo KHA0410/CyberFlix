@@ -5,12 +5,14 @@ import App from "./App";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import userSlice from "./redux/userSlice/userSlice";
+import spinnerSlice from "./redux/spinnerSlice/spinnerSlice";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-let store = configureStore({
+export let store = configureStore({
   reducer: {
     userSlice,
+    spinnerSlice,
   },
 });
 
