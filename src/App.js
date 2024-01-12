@@ -7,7 +7,7 @@ import Spinner from "./components/Spinner/Spinner";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Spinner />
       <BrowserRouter>
         {/* OutLet */}
@@ -19,7 +19,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 
