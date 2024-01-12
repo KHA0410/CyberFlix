@@ -33,7 +33,7 @@ export default function TheatersTab() {
                             <p className='address__text'>{cumRap.diaChi}</p>
                         </Tooltip>
                     </div>,
-                    children: <MovieSchedule />
+                    children: <MovieSchedule dsPhim={cumRap.danhSachPhim} />
                 }
             })} />
         }

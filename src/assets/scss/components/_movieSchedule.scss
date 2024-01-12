@@ -1,0 +1,9 @@
+.movieSchedule {
+    .movieSchedule__item {
+        .item__img {
+            width: $w-1;
+            height: $h-1;
+            object-fit: cover;
+        }
+    }
+}
