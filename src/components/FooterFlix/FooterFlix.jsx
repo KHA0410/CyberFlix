@@ -1,5 +1,4 @@
 import React from 'react';
-import "./footerFlix.css";
 
 const imgSource = ["cgv", "bhd", "agri", "beta", "cinestar", "dcine", "ddc", "ivb", "js", "laban", "mega", "lotte", "payoo", "touch", "vietcom", "vietin", "x", "zalo", "galaxy", "starlight"];
 
