@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import { RingLoader } from "react-spinners"
+import { ClimbingBoxLoader, RingLoader, RiseLoader } from "react-spinners"
 
 // todo: style spinner 
 const styleSpinner = {
