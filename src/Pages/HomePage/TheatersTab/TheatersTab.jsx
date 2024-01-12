@@ -24,7 +24,7 @@ export default function TheatersTab() {
         return {
             key: heThongRap.maHeThongRap,
             label: <img src={heThongRap.logo} className='w-14' />,
-            children: <Tabs className='theatersTab__child' style={{height: 600}} tabPosition='left' items={heThongRap.lstCumRap.map((cumRap) => {
+            children: <Tabs className='theatersTab__child' style={{height: 720}} tabPosition='left' items={heThongRap.lstCumRap.map((cumRap) => {
                 return {
                     key: cumRap.tenCumRap,
                     label: <div className='tabChild__address text-left w-60 truncate'>
@@ -41,7 +41,7 @@ export default function TheatersTab() {
 
     return (
         <div className='theaters containerCss'>
-            <Tabs className='theatersTab' style={{height: 600}} tabPosition='left' defaultActiveKey="1" items={items} onChange={onChange} />
+            <Tabs className='theatersTab' style={{height: 720}} tabPosition='left' defaultActiveKey="1" items={items} onChange={onChange} />
         </div>
     )
 }

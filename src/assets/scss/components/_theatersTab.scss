@@ -2,6 +2,16 @@
     padding: $pd-3 0;
 
     .theatersTab {
+        border: 1px solid $grey-2;
+
+        .ant-tabs-nav {
+            .ant-tabs-nav-list {
+                .ant-tabs-tab {
+                    border-bottom: 1px solid $grey-2;
+                }
+            }
+        }
+
         .theatersTab__child {
             .tabChild__address {
                 .address__title {}
