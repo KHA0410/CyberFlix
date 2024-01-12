@@ -20,7 +20,6 @@ function App() {
             <Route path="/detail/:maPhim" element={<DettailPage />} />
           </Route>
         </Routes>
-        <FooterFlix />
       </BrowserRouter>
     </div>
   );
