@@ -6,16 +6,19 @@ import HomePage from "./Pages/HomePage/HomePage";
 import HeaderFlix from "./components/HeaderFlix/HeaderFlix";
 import DettailPage from "./Pages/DetailPage/DettailPage";
 import FooterFlix from "./components/FooterFlix/FooterFlix";
+import Layout from "./Layout/Layout";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <HeaderFlix />
+        {/* OutLet */}
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/detail/:maPhim" element={<DettailPage />} />
+          <Route to="/" element={<Layout />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/detail/:maPhim" element={<DettailPage />} />
+          </Route>
         </Routes>
         <FooterFlix />
       </BrowserRouter>

@@ -33,9 +33,9 @@ const FormLogin = () => {
     console.log('Failed:', errorInfo);
   };
 return (
-  <div className='mt-10'>
+  <div className='my-10'>
    <Form
-  className='bg-blue-100 rounded p-2 containerCss'
+  className='bg-blue-100 rounded p-5 containerCss'
   layout='vertical'
     name="basic"
     //Cột label
