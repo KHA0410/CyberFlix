@@ -18,7 +18,7 @@ export default function ListMovie() {
          });
     }, [])
   return (
-    <div className='grid sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 gap-5 containerCss'>
+    <div className='grid grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 containerCss'>
         {movieArr.map((item) => {
             return(
                 //Dùng card antd

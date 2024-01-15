@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// IMPORT SCSS HERE 
+// Helpers
+@import "./helpers/variables";
+@import "./helpers/mixin";
+// Base
+@import "./base/reset";
+// Components
+@import "./components/footerFlix";
+@import "./components/theatersTab";
+@import "./components/movieSchedule";
+// Pages

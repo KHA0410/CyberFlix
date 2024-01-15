@@ -1,0 +1,35 @@
+// RESPONSIVE SCREENS 
+// Large Desktop - 1399px 
+@mixin x-desktop {
+    @media (max-width: map-get($breakpoints, 2xl)) {
+        @content;
+    }
+}
+
+// Desktop - 1199px
+@mixin desktop {
+    @media (max-width: map-get($breakpoints, xl)) {
+        @content;
+    }
+}
+
+// Tablet - 991px
+@mixin tablet {
+    @media (max-width: map-get($breakpoints, lg)) {
+        @content;
+    }
+}
+
+// Phone - 767px
+@mixin mobile {
+    @media (max-width: map-get($breakpoints, md)) {
+        @content;
+    }
+}
+
+// Small Phone - 575px
+@mixin x-mobile {
+    @media (max-width: map-get($breakpoints, sm)) {
+        @content;
+    }
+}

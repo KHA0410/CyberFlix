@@ -1,0 +1,47 @@
+// Color 
+$black-1: #000;
+$black-2: #212121;
+
+$grey-1: #9e9e9e;
+$grey-2: #e4e4e4;
+$grey-3: rgba(246, 246, 246, 0.5);
+
+$white-1: #fff;
+
+$blue-1: #3B82F6;
+
+$red-1: #fa5238;
+
+// Padding
+$pd-1: 10px;
+$pd-2: 20px;
+$pd-3: 40px;
+$pd-4: 5px;
+$pd-5: 8px;
+
+// Margin
+$mg-1: 10px;
+
+// Font-size
+$fs-1: 12px; 
+$fs-2: 16px;
+$fs-3: 18px;
+$fs-4: 14px;
+
+// Width
+$w-1: 100px;
+
+// Height
+$h-1: 126px;
+
+// Border-radius
+$br-1: 5px;
+
+// Responsive breakpoints 
+$breakpoints: (
+    2xl: 1399.98px,
+    xl: 1199.98px,
+    lg: 991.98px,
+    md: 767.98px,
+    sm: 575.98px
+);

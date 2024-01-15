@@ -1,0 +1,35 @@
+.footerHome {
+    background-color: $black-2;
+
+    .footer__content {
+        .footer__top {
+            .footerTop__item {
+                .item__title {
+                    color: $white-1;
+                    font-size: $fs-1;
+                    padding-top: $pd-1;
+                    padding-bottom: $pd-2;
+                }
+
+                .item__child {
+                    .child__text {
+                        color: $grey-1;
+                        font-size: $fs-1;
+                    }
+                }
+            }
+        }
+
+        .footer__bottom {
+            .footerBottom__item {
+                &:nth-child(2) {
+                    .item__title, 
+                    .item__text {
+                        color: $white-1;
+                        font-size: $fs-1;
+                    }
+                }
+            }
+        }
+    }
+}
