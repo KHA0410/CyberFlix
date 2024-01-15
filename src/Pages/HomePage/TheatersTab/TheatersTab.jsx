@@ -40,7 +40,7 @@ export default function TheatersTab() {
     });
 
     return (
-        <div className='theaters containerCss'>
+        <div className='theaters containerCss md:hidden'>
             <Tabs className='theatersTab' style={{height: 720}} tabPosition='left' defaultActiveKey="1" items={items} onChange={onChange} />
         </div>
     )

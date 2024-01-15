@@ -9,11 +9,11 @@ export default function MovieSchedule({ dsPhim }) {
         return dsPhim.map((phim, index) => {
             return (
                 <>
-                    <div className='movieSchedule__item flex space-x-5 items-center' key={index}>
+                    <div className='movieSchedule__item flex space-x-5 items-center ml-6' key={index}>
                         <img src={phim.hinhAnh} alt='movie' className='item__img' />
                         <div className='item__content'>
                             <h2 className='item__movieName'>{phim.tenPhim}</h2>
-                            <div className='item__schedule grid grid-cols-4 gap-4'>
+                            <div className='item__schedule grid grid-cols-4 xl:grid-cols-2 gap-4'>
                                 {phim.lstLichChieuTheoPhim.map((date, index) => {
                                     return (
                                         <a className='schedule__date' key={index}>
