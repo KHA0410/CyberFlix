@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Button,
   Form,
@@ -7,6 +7,8 @@ import {
 } from 'antd';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { https } from '../../services/api';
+import { setLoadingOff } from '../../redux/spinnerSlice/spinnerSlice';
+
 
 const FormRegister = () => {
   //Responsive form
@@ -185,7 +187,7 @@ const FormRegister = () => {
            {/* Button */}
     <Form.Item
       wrapperCol={{
-        offset: 0,
+        offset: 10,
         span: 24,
         
       }}>

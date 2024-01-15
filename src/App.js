@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./Pages/HomePage/HomePage";
 import DettailPage from "./Pages/DetailPage/DettailPage";
 import Layout from "./Layout/Layout";
+import Spinner from "./components/Spinner/Spinner";
+import RegisterPage from "./Pages/Register/RegisterPage";
 
 function App() {
   return (

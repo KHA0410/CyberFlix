@@ -8,7 +8,7 @@ export default function TheatersTab() {
     const [dsHeThongRap, setDsHeThongRap] = useState([]);
 
     useEffect(() => {
-        https.get("/api/QuanLyRap/LayThongTinLichChieuHeThongRap?maNhom=GP01").then((res) => {
+        https.get("/api/QuanLyRap/LayThongTinLichChieuHeThongRap?maNhom=GP09").then((res) => {
             console.log("res", res.data.content);
             setDsHeThongRap(res.data.content);
         }).catch((err) => {
