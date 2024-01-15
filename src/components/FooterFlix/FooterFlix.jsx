@@ -9,7 +9,7 @@ export default function FooterFlix() {
     const renderLogos = () => {
         return imgSource.map((item, index) => {
             return (
-                <a className='child__element mb-4'>
+                <a key={index}className='child__element mb-4'>
                     <img src={`./img/${item}.png`} alt='logo-partner' width={30} height={30} style={{borderRadius: "50%"}} />
                 </a>
             )

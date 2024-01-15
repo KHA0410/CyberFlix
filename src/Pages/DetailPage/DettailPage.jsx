@@ -21,9 +21,9 @@ export default function DettailPage() {
     },[])
     
   return (
-    <div className=''>
+    <div className='py-5'>
       <div className='containerCss'>
-        <h1 className='text-3xl py-2 font-medium'>Nội Dung Phim</h1>
+        <h1 className='text-3xl font-medium'>Nội Dung Phim</h1>
       <hr className='bold-hr'/>
       </div>
       

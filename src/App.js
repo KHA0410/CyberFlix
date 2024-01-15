@@ -7,6 +7,7 @@ import HeaderFlix from "./components/HeaderFlix/HeaderFlix";
 import DettailPage from "./Pages/DetailPage/DettailPage";
 import FooterFlix from "./components/FooterFlix/FooterFlix";
 import Layout from "./Layout/Layout";
+import RegisterPage from "./Pages/Register/RegisterPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route to="/" element={<Layout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
             <Route path="/detail/:maPhim" element={<DettailPage />} />
           </Route>
         </Routes>

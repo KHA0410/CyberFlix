@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Checkbox, Form, Input, message } from 'antd';
 import { https } from '../../services/api';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../redux/userSlice/userSlice';
 const FormLogin = () => {
@@ -34,8 +34,26 @@ const FormLogin = () => {
   };
 return (
   <div className='my-10'>
+    {/* Header Form */}
+      <Form.Item
+      style={{
+        maxWidth: 500,
+      }}
+      className='containerCss'>
+      <div className='bg-blue-500 flex justify-around font-bold text-white text-2xl rounded-t-xl py-1'>
+        <div>
+          <h1 to={"/login"}>Đăng nhập
+          <hr className='bold-hr-2'/>
+          </h1>
+        </div>
+        <div className='text-gray-400'>
+          <NavLink to={"/register"}>Đăng kí</NavLink>
+        </div>
+      </div>
+    </Form.Item>
+     
    <Form
-  className='bg-blue-100 rounded p-5 containerCss'
+  className='bg-blue-100 rounded-b-xl p-5 containerCss'
   layout='vertical'
     name="basic"
     //Cột label
@@ -58,6 +76,7 @@ return (
     onFinishFailed={onFinishFailed}
     autoComplete="off"
   >
+
     {/* Form nhập tài khoản */}
     <Form.Item 
       className='text-white'

@@ -27,7 +27,7 @@ export default function HeaderFlix() {
     else {
       return (
         <>
-          <button className={cssBtn}>Đăng kí</button>
+          <NavLink to={"/register"} className={cssBtn}>Đăng kí</NavLink>
           <button className={cssBtn} onClick={() => { window.location.href = "/login" }}>Đăng nhập</button>
         </>
       )
