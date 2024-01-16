@@ -57,8 +57,8 @@ export default function HeaderFlix() {
           <div className='headerFlix__content h-20 px-4 flex justify-between items-center'>
             <NavLink to={"/"} className='text-3xl font-bold text-blue-500'>CyberFlix</NavLink>
             <div className='headerFlix__menu lg:hidden'>
-              <a href='#' className='menu__item mx-4'>Lịch chiếu</a>
-              <a href='#' className='menu__item mx-4'>Cụm rạp</a>
+              <a href='#lichChieu' className='menu__item mx-4'>Lịch chiếu</a>
+              <a href='#cumRap' className='menu__item mx-4'>Cụm rạp</a>
               <a href='#' className='menu__item mx-4'>Tin tức</a>
               <a href='#' className='menu__item mx-4'>Ứng dụng</a>
             </div>
