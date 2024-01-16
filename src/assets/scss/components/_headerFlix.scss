@@ -1,0 +1,51 @@
+.headerFlix {
+    .headerFlix__content {
+        .headerFlix__menu {
+            .menu__item {
+                transition: all .3s ease-in-out;
+
+                &:hover {
+                    color: $blue-1;
+                }
+            }
+        }
+
+        // Header for mobile & tablet screen
+        .showMobileMenu {
+            background-color: $blue-1;
+
+            #mobile-menu {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                height: 100vh;
+                width: 200px;
+
+                .headerFlix__account {
+                    display: flex;
+                    flex-direction: column;
+
+                    .account__item {
+                        display: flex;
+                        justify-content: center;
+
+                        &:nth-child(1) {
+                            margin-bottom: $mg-2;
+                        }
+                    }
+                }
+
+                .headerFlix__menu {
+                    .menu__item {
+                        color: white;
+                        transition: all .3s;
+
+                        &:hover {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
