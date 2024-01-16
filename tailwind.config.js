@@ -1,8 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-    'node_modules/flowbite-react/lib/esm/**/*.js'
+    "./src/**/*.{js,jsx,ts,tsx}"
   ],
   theme: {
     extend: {},
@@ -22,8 +21,5 @@ module.exports = {
       'sm': {'max': '575.98px'},
       // => @media (max-width: 639px) { ... }
     }
-  },
-  plugins: [
-    require('flowbite/plugin')
-  ],
+  }
 };
