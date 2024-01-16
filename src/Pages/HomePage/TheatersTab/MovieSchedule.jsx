@@ -13,7 +13,7 @@ export default function MovieSchedule({ dsPhim }) {
                         <img src={phim.hinhAnh} alt='movie' className='item__img' />
                         <div className='item__content'>
                             <h2 className='item__movieName'>{phim.tenPhim}</h2>
-                            <div className='item__schedule grid grid-cols-4 xl:grid-cols-2 gap-4'>
+                            <div className='item__schedule grid grid-cols-3 2xl:grid-cols-2 lg:grid-cols-1 gap-4'>
                                 {phim.lstLichChieuTheoPhim.map((date, index) => {
                                     return (
                                         <a className='schedule__date' key={index}>
