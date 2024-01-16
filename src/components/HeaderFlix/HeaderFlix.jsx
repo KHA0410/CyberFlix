@@ -21,7 +21,7 @@ export default function HeaderFlix() {
   let renderMenu = () => {
     //CSS button
     let cssBtn = "px-5 py-2 rounded-lg border-2 border-white text-white bg-blue-500";
-    let cssUserName = "px-5 py-2 rounded-lg border-2 border-sky-500"
+    let cssUserName = "px-5 py-2 rounded-lg border-2 border-sky-500 lg:bg-white lg:border-white lg:mb-3 lg:text-sm lg:text-center"
 
     // Nếu đã đăng nhập
     if (user) {
