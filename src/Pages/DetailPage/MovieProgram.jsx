@@ -57,6 +57,7 @@ export default function MovieProgram() {
                         Hệ thống rạp chiếu của bộ phim này chưa được cập nhật hoặc đã quá
                         hạn chiếu ! Vui lòng quay lại sau sau !
                     </h1>
+                    <br />
                     <h1>Xin lỗi vì sự bất tiện này !</h1>
                 </div>
             ) : (
