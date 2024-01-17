@@ -15,8 +15,8 @@ export default function CarouselMovie() {
          });
     },[])  
   return (
-    <div >
-      <Carousel autoplay dots = "bg-red-500">
+    <div className='pb-10'>
+      <Carousel autoplay>
       {banner.map((item) => {
         return(
           <div>
