@@ -7,10 +7,12 @@ import BookingSeats from './BookingSeats';
 export default function Booking() {
     let { maLichChieu } = useParams();
     const [dsGhe, setDsGhe] = useState([]);
+    const [thongTinPhim, setThongTinPhim] = useState({});
 
     useEffect(() => {
         https.get(`/api/QuanLyDatVe/LayDanhSachPhongVe?MaLichChieu=${maLichChieu}`).then((res) => {
             console.log("lich chieu", res.data.content);
+            setThongTinPhim(res.data.content.thongTinPhim);
             setDsGhe(res.data.content.danhSachGhe);
         }).catch((err) => {
             console.log("err", err);
@@ -26,7 +28,7 @@ export default function Booking() {
                     <BookingSeats dsGhe={dsGhe} />
                 </div>
                 <div className='booking__payment rounded-md w-3/5 lg:w-4/5 md:w-11/12 sm:w-full'>
-                    <BookingPayment />
+                    <BookingPayment ttPhim={thongTinPhim} />
                 </div>
             </div>
         </div>

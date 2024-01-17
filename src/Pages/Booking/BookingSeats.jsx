@@ -40,7 +40,6 @@ export default function BookingSeats({ dsGhe }) {
 
     // todo: handle selected seat
     let handleSelectedSeat = (gheDangChon) => {
-        console.log("gheDangChon", gheDangChon);
         let dsGheDatMoi = [...dsGheDangDat];
         let indexGheDangDat = dsGheDangDat.findIndex(gheDangDat => gheDangDat.tenGhe === gheDangChon.tenGhe);
 
@@ -54,7 +53,6 @@ export default function BookingSeats({ dsGhe }) {
 
         dsGheDangDat = dsGheDatMoi;
         return [...dsGheDangDat];
-
     }
 
     return (

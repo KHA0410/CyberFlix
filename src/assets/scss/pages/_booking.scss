@@ -78,6 +78,20 @@
                     border-bottom: none;
                 }
 
+                &:nth-child(3), &:nth-child(7) {
+                    .item__value {
+                        width: 75%;
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                }
+
+                &:nth-child(8) {
+                    .item__value {
+                        color: $red-1;
+                    }
+                }
+
                 .item__title {
                     font-weight: 500;
                     font-size: $fs-2;
