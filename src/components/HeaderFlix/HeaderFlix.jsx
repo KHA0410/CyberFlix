@@ -56,8 +56,8 @@ export default function HeaderFlix() {
   }
 
   return (
-    <div className='h-20'>
-      <div className='h-20 flex justify-between items-center px-4 shadow-xl fixed z-10 bg-white w-full'>
+    <div className='headerFlix h-20'>
+      <div className='headerFlix__content h-20 flex justify-between items-center px-4 shadow-xl fixed z-10 bg-white w-full'>
         <NavLink to={"/"} className='text-3xl font-bold text-blue-500'>CyberFlix</NavLink>
         <div className='headerFlix__menu lg:hidden'>
           <a href='#lichChieu' className='menu__item mx-4'>Lịch chiếu</a>
@@ -65,7 +65,7 @@ export default function HeaderFlix() {
           <a href='#' className='menu__item mx-4'>Tin tức</a>
           <a href='#' className='menu__item mx-4'>Ứng dụng</a>
         </div>
-        <div className='space-x-3'>{renderMenu()}</div>
+        <div className='space-x-3 lg:hidden'>{renderMenu()}</div>
 
 
         {/* Button bars for mobile phone & tablets screen */}
