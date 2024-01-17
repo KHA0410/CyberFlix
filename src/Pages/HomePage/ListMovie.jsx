@@ -5,20 +5,22 @@ import Meta from 'antd/es/card/Meta';
 import { NavLink } from 'react-router-dom';
 
 export default function ListMovie() {
-    const [movieArr, setMovieArr] = useState([])
-    //Lấy ds phim
-    useEffect(() => {
-        https.get("/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP09")
-        .then((res) => {
-         console.log(res.data.content);
-         setMovieArr(res.data.content)
-        })
-        .catch((err) => {
-         console.log(err);
-         });
-    }, [])
+  const [movieArr, setMovieArr] = useState([]);
+
+  //Lấy ds phim
+  useEffect(() => {
+    https.get("/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP09")
+      .then((res) => {
+        console.log(res.data.content);
+        setMovieArr(res.data.content)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
-    <div className='grid grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 containerCss pt-10'>
+    <div className='grid grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 containerCss'>
         {movieArr.map((item) => {
             return(
                 //Dùng card antd

@@ -27,7 +27,7 @@ export default function TheatersTab() {
             children: <Tabs className='theatersTab__child' style={{height: 720}} tabPosition='left' items={heThongRap.lstCumRap.map((cumRap) => {
                 return {
                     key: cumRap.tenCumRap,
-                    label: <div className='tabChild__address text-left w-60 truncate'>
+                    label: <div className='tabChild__address text-left w-72 truncate'>
                         <h2 className='address__title uppercase'>{cumRap.tenCumRap}</h2>
                         <Tooltip title={cumRap.diaChi}>
                             <p className='address__text'>{cumRap.diaChi}</p>
@@ -40,7 +40,7 @@ export default function TheatersTab() {
     });
 
     return (
-        <div className='theaters containerCss'>
+        <div className='theaters containerCss md:hidden' id='cumRap'>
             <Tabs className='theatersTab' style={{height: 720}} tabPosition='left' defaultActiveKey="1" items={items} onChange={onChange} />
         </div>
     )

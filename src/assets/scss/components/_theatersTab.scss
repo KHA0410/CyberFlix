@@ -7,15 +7,29 @@
         .ant-tabs-nav {
             .ant-tabs-nav-list {
                 .ant-tabs-tab {
-                    border-bottom: 1px solid $grey-2;
+                    // border-bottom: 1px solid $grey-2;
                 }
             }
         }
 
-        .theatersTab__child {
-            .tabChild__address {
-                .address__title {}
-                .address__text {}
+        .ant-tabs-content-holder {
+            .ant-tabs-content-left {
+                .ant-tabs-tabpane {
+                    padding-left: 0;
+
+                    .theatersTab__child {
+                        .tabChild__address {
+                            .address__title {
+                                color: $blue-1;
+                                font-weight: 500;
+                            }
+                            .address__text {
+                                color: $grey-4;
+                                font-size: $fs-1;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

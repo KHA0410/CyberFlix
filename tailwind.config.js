@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}"
+  ],
   theme: {
     extend: {},
     screens: {
@@ -19,6 +21,5 @@ module.exports = {
       'sm': {'max': '575.98px'},
       // => @media (max-width: 639px) { ... }
     }
-  },
-  plugins: [],
+  }
 };
