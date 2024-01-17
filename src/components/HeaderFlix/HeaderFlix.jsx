@@ -81,8 +81,8 @@ export default function HeaderFlix() {
                 </div>
                 <hr />
                 <div className='headerFlix__menu flex flex-col ml-6 my-4'>
-                  <a href='#' className='menu__item my-4'>Lịch chiếu</a>
-                  <a href='#' className='menu__item my-4'>Cụm rạp</a>
+                  <a href='#lichChieu' className='menu__item my-4'>Lịch chiếu</a>
+                  <a href='#cumRap' className='menu__item my-4'>Cụm rạp</a>
                   <a href='#' className='menu__item my-4'>Tin tức</a>
                   <a href='#' className='menu__item my-4'>Ứng dụng</a>
                 </div>
