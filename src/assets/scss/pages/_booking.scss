@@ -24,7 +24,6 @@
                     margin: $mg-4 auto;
 
                     .dsGhe__seat {
-                        background-color: $grey-4;
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -44,8 +43,8 @@
                         justify-content: center;
                         align-items: center;
 
-                        .dsGhe__seat {
-                            background-color: $grey-4;
+                        .empty {
+                            background-color: $grey-5;
                         }
 
                         .selecting {

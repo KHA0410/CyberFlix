@@ -43,3 +43,15 @@
         }
     }
 }
+
+.empty {
+    background-color: $grey-5;
+}
+
+.selecting {
+    background-color: green;
+}
+
+.selected {
+    background-color: $red-1;
+}
