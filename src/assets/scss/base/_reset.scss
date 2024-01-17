@@ -16,3 +16,30 @@
 .bold-hr {
     border: 1px solid $black-1;
 }
+
+.schedule__date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $grey-2;
+    padding: $pd-5;
+    border-radius: $br-1;
+    background: $grey-3;
+    color: $grey-1;
+    font-size: $fs-2;
+
+    p {
+        &:nth-child(1) {
+            padding-right: $pd-4;
+            color: $blue-1;
+            font-weight: 500;
+            font-size: $fs-4;
+        }
+
+        &:nth-child(3) {
+            padding-left: $pd-4;
+            color: $red-1;
+            font-weight: 500;
+        }
+    }
+}

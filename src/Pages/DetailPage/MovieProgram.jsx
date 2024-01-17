@@ -22,17 +22,21 @@ export default function MovieProgram() {
         console.log("cum Rap", cumRap);
         return {
             key: index,
-            label: <img src={cumRap.logo} className='w-10' />,
+            label: <img src={cumRap.logo} className='w-14' />,
             children: <Tabs className='cumRap__item' defaultActiveKey='1' style={{height: 500}} items={cumRap.cumRapChieu.map((rap, index) => {
                 return {
                     key: index,
                     label: <div className='cumRap__title'>
                         <h2>{rap.tenCumRap}</h2>
                     </div>,
-                    children: <div className='cumRap__schedules'>
+                    children: <div className='cumRap__schedules grid grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-4'>
                         {rap.lichChieuPhim.map((phim, index) => {
                             return <button className='schedule__item' key={index}>
-                                <span>{moment(phim.ngayChieuGioChieu).format("DD/mm/yyyy hh:mm")}</span>
+                                <a className='schedule__date' key={index}>
+                                    <p>{moment(phim.ngayChieuGioChieu).format("DD/MM/YYYY")}</p>
+                                    <span>~</span>
+                                    <p>{moment(phim.ngayChieuGioChieu).format("hh:mm")}</p>
+                                </a>
                             </button>
                         })}
                     </div>
