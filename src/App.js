@@ -6,10 +6,12 @@ import Layout from "./Layout/Layout";
 import Spinner from "./components/Spinner/Spinner";
 import RegisterPage from "./Pages/Register/RegisterPage";
 import { FloatButton } from "antd";
+import Tickets from "./Booking/Tickets";
 
 function App() {
   return (
     <>
+      <Tickets />
       <Spinner />
       <BrowserRouter>
         {/* OutLet */}
