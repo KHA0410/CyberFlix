@@ -25,7 +25,7 @@ export default function Booking() {
                 <div className='booking__seatsSelection'>
                     <BookingSeats dsGhe={dsGhe} />
                 </div>
-                <div className='booking__payment rounded-md w-3/5'>
+                <div className='booking__payment rounded-md w-3/5 lg:w-4/5 md:w-11/12 sm:w-full'>
                     <BookingPayment />
                 </div>
             </div>

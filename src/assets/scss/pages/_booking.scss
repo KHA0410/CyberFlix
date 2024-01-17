@@ -29,6 +29,10 @@
                         justify-content: center;
                         align-items: center;
                     }
+
+                    @include x-mobile {
+                        grid-gap: 8px;
+                    }
                 }
 
                 .content__note {
