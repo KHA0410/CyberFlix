@@ -1,3 +1,28 @@
 .detailPage__movieProgram {
     margin-top: $mg-3;
+    margin-bottom: $mg-3;
+
+    .movieProgram__content {
+        border: 1px solid $grey-2;
+        padding: $pd-2;
+
+        .content__cumRap {
+            .cumRap__item {
+                .cumRap__title {
+
+                }
+
+                .schedule__item {}
+            }
+        }
+    }
+
+    .movieProgram__empty {
+        background: $black-2;
+
+        h1 {
+            font-size: $fs-5;
+            color: $red-1;
+        }
+    }
 }

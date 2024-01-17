@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { https } from '../../services/api'
-import { Rate } from 'antd'
+import { Rate, message } from 'antd'
 import MovieProgram from './MovieProgram'
 
 export default function DettailPage() {
+
+  const [messageApi, contextHolder] = message.useMessage();
+  const info = () => {
+    messageApi.info('Vui lòng chọn khung giờ chiếu phù hợp !');
+  };
+
   //Lấy mã phim từ URL
   let { maPhim } = useParams()
 
@@ -44,7 +50,8 @@ export default function DettailPage() {
           <p><b>Trailer:</b> {detail.trailer}</p>
           <p><b>Rate:</b> <Rate value={detail.danhGia} /></p>
           <div>
-            <button className='bg-blue-500 text-white rounded px-5 py-1 form-medium mt-5'>Mua vé</button>
+            {contextHolder}
+            <button className='bg-blue-500 text-white rounded px-5 py-1 font-normal text-xl mt-5' onClick={info}>Mua vé</button>
           </div>
 
         </div>

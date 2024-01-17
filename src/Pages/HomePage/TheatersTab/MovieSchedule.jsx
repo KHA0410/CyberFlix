@@ -17,7 +17,7 @@ export default function MovieSchedule({ dsPhim }) {
                                 {phim.lstLichChieuTheoPhim.map((date, index) => {
                                     return (
                                         <a className='schedule__date' key={index}>
-                                            <p>{moment(date).format("DD-MM-YYYY")}</p>
+                                            <p>{moment(date).format("DD/MM/YYYY")}</p>
                                             <span>~</span>
                                             <p>{moment(date).format("hh:mm")}</p>
                                         </a>
