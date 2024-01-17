@@ -1,17 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import BookingPayment from './BookingPayment'
+import { useParams } from 'react-router-dom'
+import { https } from '../../services/api';
+import BookingSeats from './BookingSeats';
 
 export default function Booking() {
-  return (
-    <div className='booking containerCss'>
-        <h1 className='booking__title text-center capitalize text-4xl font-normal mb-5'>Vui lòng chọn ghế</h1>
-        <hr />
-        <div className='booking__content mt-8'>
-            <div className='booking__seatsSelection'></div>
-            <div className='booking__payment rounded-md w-3/5'>
-                <BookingPayment />
+    let { maLichChieu } = useParams();
+    const [dsGhe, setDsGhe] = useState([]);
+
+    useEffect(() => {
+        https.get(`/api/QuanLyDatVe/LayDanhSachPhongVe?MaLichChieu=${maLichChieu}`).then((res) => {
+            console.log("lich chieu", res.data.content);
+            setDsGhe(res.data.content.danhSachGhe);
+        }).catch((err) => {
+            console.log("err", err);
+        });
+    }, []);
+
+    return (
+        <div className='booking containerCss'>
+            <h1 className='booking__title text-center capitalize text-4xl font-normal mb-5'>Vui lòng chọn ghế</h1>
+            <hr />
+            <div className='booking__content mt-8'>
+                <div className='booking__seatsSelection'>
+                    <BookingSeats dsGhe={dsGhe} />
+                </div>
+                <div className='booking__payment rounded-md w-3/5'>
+                    <BookingPayment />
+                </div>
             </div>
         </div>
-    </div>
-  )
+    )
 }

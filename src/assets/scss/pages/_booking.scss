@@ -3,20 +3,74 @@
     margin-bottom: $mg-3;
 
     .booking__title {}
+
     .booking__content {
-        .booking__seatsSelection {}
+        .booking__seatsSelection {
+
+            .seatsSelection__content {
+                .content__screen {
+                    margin: 0 auto;
+                    border-bottom: 50px solid $blue-1;
+                    border-left: 45px solid transparent;
+                    border-right: 45px solid transparent;
+                    height: 0;
+                }
+
+                .content__dsGhe {
+                    display: grid;
+                    grid-template-columns: repeat(16, 1fr);
+                    grid-gap: 10px;
+                    justify-items: center;
+                    margin: $mg-4 auto;
+
+                    .dsGhe__seat {
+                        background-color: $grey-4;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
+                .content__note {
+                    margin: 0 auto;
+                    justify-items: center;
+
+                    .note__item {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .dsGhe__seat {
+                            background-color: $grey-4;
+                        }
+
+                        .selecting {
+                            background-color: green;
+                        }
+
+                        .selected {
+                            background-color: $red-1;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
         .booking__payment {
             border: 1px solid $grey-2;
             padding: $pd-2;
-            margin: 0 auto;
+            margin: $mg-4 auto;
 
             .payment__item {
                 display: flex;
                 justify-content: space-between;
                 border-bottom: 1px solid $grey-2;
                 padding: $pd-2 0;
-                
-                &:first-child, &:last-child {
+
+                &:first-child,
+                &:last-child {
                     justify-content: center;
                     border-bottom: none;
                 }
