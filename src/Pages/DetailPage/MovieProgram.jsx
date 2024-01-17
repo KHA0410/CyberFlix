@@ -32,11 +32,6 @@ export default function MovieProgram() {
     return (
         <div className='detailPage__movieProgram containerCss'>
             {/* Using ternary operator to check if having movie schedule */}
-            {dsLichChieu.heThongRapChieu.length === 0 ? (
-                <div>Khong co lich chieu</div>
-            ) : (
-                <div>Co lich chieu</div>
-            )}
         </div>
     )
 }
