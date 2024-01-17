@@ -5,7 +5,7 @@ import FooterFlix from '../components/FooterFlix/FooterFlix'
 
 export default function Layout() {
   return (
-    <div className='space-y-5'>
+    <div>
         <HeaderFlix/>
         <Outlet/>
         <FooterFlix />

@@ -109,11 +109,13 @@ return (
       {/* Button */}
     <Form.Item
       wrapperCol={{
-        offset: 9,
-        span: 16,
+        offset: 0,
+        span: 24,
+      
       }}
+      
     >
-      <Button className='bg-blue-500' type="primary" htmlType="submit">
+      <Button style={{width: "100%"}} className='bg-blue-500 ' type="primary" htmlType="submit">
         Đăng nhập
       </Button>
     </Form.Item>

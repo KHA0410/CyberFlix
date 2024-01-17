@@ -5,6 +5,7 @@ import DettailPage from "./Pages/DetailPage/DettailPage";
 import Layout from "./Layout/Layout";
 import Spinner from "./components/Spinner/Spinner";
 import RegisterPage from "./Pages/Register/RegisterPage";
+import { FloatButton } from "antd";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      <FloatButton.BackTop />
     </>
   );
 }
