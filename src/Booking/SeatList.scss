@@ -1,0 +1,35 @@
+.seatlist {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    z-index: 3;
+    .seatlistContent {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .screen {
+      border-bottom: 50px solid rgb(255, 159, 95);
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      height: 70px;
+      filter: drop-shadow(4px 30px 20px rgba(255, 255, 255, 0.5));
+      margin-bottom: 25px;
+      margin-right: 33px;
+      padding-bottom: 60px;
+      font-size: 40px;
+      text-align: center;
+      font-weight: 700;
+      color: #54ab35 !important;
+      @media (max-width: 991.98px) {
+        font-size: 35px;
+      }
+      // X-Small devices (portrait phones, less than 576px)
+      @media (max-width: 575.98px) {
+        font-size: 30px;
+        border-bottom: 35px solid rgb(255, 159, 95);
+        border-left: 35px solid transparent;
+        border-right: 35px solid transparent;
+      }
+    }
+  }
+  

@@ -1,0 +1,22 @@
+.seatTicket {
+
+    background-color: white;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    margin: 13px;
+    cursor: pointer;
+  }
+  
+  .seatIsBooked {
+    background-color: rgb(118, 118, 118);
+  }
+  .seatVip {
+    background-color: orange;
+  }
+  .seatIsSelected {
+    background-color: green;
+  }
+  
+  

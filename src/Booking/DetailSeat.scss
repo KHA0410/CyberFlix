@@ -1,0 +1,59 @@
+.detailtickets {
+    margin-top: 120px;
+    margin-right: 20px;
+    box-shadow: 0 0 5px grey;
+    padding: 40px 0;
+    background-color: #333;
+    border-radius: 5px;
+    position: relative;
+    z-index: 3;
+    .detailticketsPrice {
+      text-align: center;
+      font-size: 30px;
+      color: #54ab35;
+    }
+    .detailticketsItem {
+      padding: 24px 16px;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 17px;
+        background-color: gray;
+        width: 92%;
+        height: 1px;
+      }
+      p {
+        font-weight: 500;
+        font-size: 15px;
+        text-align: right;
+  
+        @media (max-width:991.98px) {
+          font-size: 13px;
+        }
+        @media (max-width:900px) {
+          font-size: 15px;
+        }
+        &:first-child {
+          margin-right: 10px;
+          color: white;
+        }
+        &:last-child {
+          color: #54ab35;
+          display: flex;
+          flex-wrap: wrap;
+          max-width: 226px;
+          @media (max-width:991.98px) {
+            max-width: 207px
+          }
+        }
+      }
+      .detailticketsNumberseat {
+        padding-right: 10px;
+      }
+    }
+  }
+  

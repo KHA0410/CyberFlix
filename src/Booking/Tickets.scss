@@ -1,0 +1,47 @@
+.tickets {
+    padding: 80px 0;
+    background: url("https://p.w3layouts.com/demos_new/template_demo/23-03-2018/movie_seat_selection-demo_Free/759053290/web/images/banner.jpg")
+      no-repeat center;
+    background-size: cover;
+    position: relative;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+    }
+    .btnList {
+      display: flex;
+      justify-content: center;
+      .btnGroup {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+        p {
+          color: white;
+          font-weight: 500;
+        }
+        .btnItem {
+          width: 35px;
+          height: 35px;
+          border: none;
+          border-radius: 5px;
+          background-color: rgb(233, 233, 233);
+          margin: 20px;
+        }
+        .btnDisable {
+          background-color: rgb(118, 118, 118);
+        }
+        .btnVip {
+          background-color: orange;
+        }
+      }
+    }
+  }
+  
