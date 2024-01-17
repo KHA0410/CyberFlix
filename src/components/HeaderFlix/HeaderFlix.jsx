@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom';
-
+import {UserOutlined} from '@ant-design/icons';
 export default function HeaderFlix() {
   let { user } = useSelector(state => state.userSlice);
   console.log('user: ', user);
@@ -33,7 +33,7 @@ export default function HeaderFlix() {
     if (user) {
       return (
         <>
-          <span className={cssUserName}>{user.hoTen}</span>
+          <span className={cssUserName}><UserOutlined /> {user.hoTen}</span>
           <button className={cssBtn} onClick={handleLogout}>Đăng xuất</button>
         </>
       )
