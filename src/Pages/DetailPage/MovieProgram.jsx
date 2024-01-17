@@ -1,6 +1,6 @@
 import { Tabs } from 'antd'
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import { https } from '../../services/api';
 import moment from 'moment';
 
@@ -11,7 +11,7 @@ export default function MovieProgram() {
 
     useEffect(() => {
         https.get(`/api/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${maPhim}`).then((res) => {
-            console.log("ket qua lich chieu phim", res.data.content);
+            // console.log("ket qua lich chieu phim", res.data.content);
             setDsLichChieu(res.data.content.heThongRapChieu); 
         }).catch((err) => {
             console.log("err", err);
@@ -19,7 +19,7 @@ export default function MovieProgram() {
     }, []);
 
     const items = dsLichChieu.map((cumRap, index) => {
-        console.log("cum Rap", cumRap);
+        // console.log("cum Rap", cumRap);
         return {
             key: index,
             label: <img src={cumRap.logo} className='w-14' />,
@@ -31,12 +31,13 @@ export default function MovieProgram() {
                     </div>,
                     children: <div className='cumRap__schedules grid grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-4'>
                         {rap.lichChieuPhim.map((phim, index) => {
+                            console.log("phim", phim);
                             return <button className='schedule__item' key={index}>
-                                <a className='schedule__date' key={index}>
+                                <NavLink to={`/booking/${phim.maLichChieu}`} className='schedule__date' key={index}>
                                     <p>{moment(phim.ngayChieuGioChieu).format("DD/MM/YYYY")}</p>
                                     <span>~</span>
                                     <p>{moment(phim.ngayChieuGioChieu).format("hh:mm")}</p>
-                                </a>
+                                </NavLink>
                             </button>
                         })}
                     </div>

@@ -6,6 +6,7 @@ import Layout from "./Layout/Layout";
 import Spinner from "./components/Spinner/Spinner";
 import RegisterPage from "./Pages/Register/RegisterPage";
 import { FloatButton } from "antd";
+import Booking from "./Pages/Booking/Booking";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/detail/:maPhim" element={<DettailPage />} />
+            <Route path="/booking/:maChieuPhim" element={<Booking />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
