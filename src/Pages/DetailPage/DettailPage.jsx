@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { https } from '../../services/api'
-import { Rate } from 'antd'
+import { Button, Rate } from 'antd'
 
 export default function DettailPage() {
   //Lấy mã phim từ URL
@@ -15,7 +15,7 @@ export default function DettailPage() {
 
     https.get(`/api/QuanLyPhim/LayThongTinPhim?MaPhim=${maPhim}`)
       .then((res) => {
-        console.log(res.data.content);
+        console.log("Detail",res.data.content);
         setIsLoading(false);
         setDetail(res.data.content);
       })
@@ -42,10 +42,27 @@ export default function DettailPage() {
           <p><b>Thời gian chiếu:</b> {detail.ngayKhoiChieu}</p>
           <p><b>Trailer:</b> {detail.trailer}</p>
           <p><b>Rate:</b> <Rate value={detail.danhGia} /></p>
+          <video controls width={500} height={300} >
+            <source src={detail.trailer} type='video/mp4'/>
+          </video>
+          
+          <div className='flex py-5 space-x-5'>
+            {/* Button trailer */}
           <div>
-            <button className='bg-blue-500 text-white rounded px-5 py-1 form-medium mt-5'>Mua vé</button>
+            <Button className='text-blue-500 border-blue-500'>Xem trailer</Button>
+          </div>
+          {/* Button mua */}
+          <div>
+          <Button type='primary' className='bg-blue-500 text-white rounded  form-medium '>Muavé</Button>
+          </div>
           </div>
 
+        <div>
+         
+            
+          
+
+        </div>
         </div>
       </div>
     </div>
