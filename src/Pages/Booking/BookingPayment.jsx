@@ -1,4 +1,6 @@
+import { CheckCircleTwoTone } from '@ant-design/icons';
 import { message } from 'antd';
+import confirm from 'antd/es/modal/confirm';
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
@@ -7,8 +9,22 @@ export default function BookingPayment({ ttPhim }) {
     let { dsGheDangDat } = useSelector(state => state.seatSlice);
     console.log(dsGheDangDat);
     console.log(ttPhim);
-    let {user} = useSelector(state=>state.userSlice)
-    let navigate = useNavigate()
+    let { user } = useSelector(state => state.userSlice);
+    let navigate = useNavigate();
+
+    // show confirm when payment 
+    let showConfirm = () => {
+        confirm({
+            title: 'Đặt vé thành công !',
+            icon: <CheckCircleTwoTone twoToneColor="#52c41a" style={{fontSize: "60px"}} />,
+            onOk() {
+                console.log('OK');
+            },
+            onCancel() {
+                console.log('Cancel');
+            },
+        })
+    }
 
     let renderThongTinVe = (dsGheDangDat) => {
         let total = 0;
@@ -21,14 +37,15 @@ export default function BookingPayment({ ttPhim }) {
     }
 
     let handleBuyTicket = () => {
-     if(user){
-        //Trang thanh toán
-     }else{
-        localStorage.setItem("BOOKING", '/booking')
-        navigate("/login")
-        message.error("Vui lòng đăng nhập để đặt vé!")
+        if (user) {
+            // show confirm 
+            showConfirm();
+        } else {
+            localStorage.setItem("BOOKING", '/booking')
+            navigate("/login")
+            message.error("Vui lòng đăng nhập để đặt vé!")
         }
-     }
+    }
 
     return (
         <>
@@ -67,7 +84,7 @@ export default function BookingPayment({ ttPhim }) {
                 <button className='uppercase w-full font-medium rounded-md text-3xl pt-3 pb-3 text-white bg-blue-500'
                 onClick={handleBuyTicket}
                 >đặt vé</button>
-            </div>
+            </div>           
         </>
     )
 }

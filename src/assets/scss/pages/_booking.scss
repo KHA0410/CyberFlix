@@ -105,3 +105,40 @@
         }
     }
 }
+
+// STYLE FOR MODAL CONFIRM
+.ant-modal-content {
+    .ant-modal-body {
+        .ant-modal-confirm-body {
+            flex-direction: column;
+            align-items: center;
+
+            .anticon {
+                padding: 0;
+                margin: 0;
+                margin-bottom: $mg-5;
+            }
+
+            .ant-modal-confirm-paragraph {
+                .ant-modal-confirm-title {
+                    font-size: $fs-6;
+                    color: $grey-6;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .ant-modal-confirm-btns {
+            display: flex;
+            justify-content: center;
+
+            .ant-btn {
+                background-color: $blue-2;
+
+                &:hover {
+                    background-color: $blue-3;
+                }
+            }
+        }
+    }
+}
