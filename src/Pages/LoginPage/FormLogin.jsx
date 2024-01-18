@@ -2,9 +2,10 @@ import React from 'react';
 import { Button, Checkbox, Form, Input, message } from 'antd';
 import { https } from '../../services/api';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch} from 'react-redux';
 import { setUser } from '../../redux/userSlice/userSlice';
 const FormLogin = () => {
+  
   //tạo navigate điều hướng trang
   let navigate = useNavigate()
   //tạo dispatch
@@ -18,8 +19,14 @@ const FormLogin = () => {
      message.success("Đăng nhập thành công")
      //Đẩy data lên redux
      dispatch(setUser(res.data.content))
-     //Điều hướng trang qua HomePage sau khi đăng nhập thành công
-     navigate("/")
+     //Nếu có trạng thái BOOKING thì sẽ quay lại trang đặt vé còn không thì sẽ vào homepage
+     const booking = localStorage.getItem("BOOKING");
+     if (booking === '/booking') {
+      window.history.back();
+      localStorage.removeItem("BOOKING");
+    } else{
+      navigate("/"); // Chuyển hướng qua homepage
+    }
      //Lưu xuống localstore
      let dataJon = JSON.stringify(res.data.content)
      localStorage.setItem("USER_LOGIN", dataJon)

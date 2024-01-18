@@ -7,10 +7,9 @@ export default function BookingPayment({ ttPhim }) {
     let { dsGheDangDat } = useSelector(state => state.seatSlice);
     console.log(dsGheDangDat);
     console.log(ttPhim);
-
-    let navigate = useNavigate()
     let {user} = useSelector(state=>state.userSlice)
-  
+    let navigate = useNavigate()
+
     let renderThongTinVe = (dsGheDangDat) => {
         let total = 0;
         let arrVe = [];
@@ -18,21 +17,19 @@ export default function BookingPayment({ ttPhim }) {
             arrVe.push(`ghế ${ghe.tenGhe}, `);
             total += ghe.giaVe;
         });
-
         return { total, arrVe };
     }
 
     let handleBuyTicket = () => {
      if(user){
-
+        //Trang thanh toán
      }else{
+        localStorage.setItem("BOOKING", '/booking')
         navigate("/login")
         message.error("Vui lòng đăng nhập để đặt vé!")
-        if(user){
-            navigate("/booking")
         }
      }
-    }
+
     return (
         <>
             <div className='payment__item'>
