@@ -1,11 +1,16 @@
+import { message } from 'antd';
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom';
 
 export default function BookingPayment({ ttPhim }) {
     let { dsGheDangDat } = useSelector(state => state.seatSlice);
     console.log(dsGheDangDat);
     console.log(ttPhim);
 
+    let navigate = useNavigate()
+    let {user} = useSelector(state=>state.userSlice)
+  
     let renderThongTinVe = (dsGheDangDat) => {
         let total = 0;
         let arrVe = [];
@@ -17,6 +22,17 @@ export default function BookingPayment({ ttPhim }) {
         return { total, arrVe };
     }
 
+    let handleBuyTicket = () => {
+     if(user){
+
+     }else{
+        navigate("/login")
+        message.error("Vui lòng đăng nhập để đặt vé!")
+        if(user){
+            navigate("/booking")
+        }
+     }
+    }
     return (
         <>
             <div className='payment__item'>
@@ -51,7 +67,9 @@ export default function BookingPayment({ ttPhim }) {
                 <p className='item__value text-xl'>{(renderThongTinVe(dsGheDangDat).total).toLocaleString()} VND</p>
             </div>
             <div className='payment__item'>
-                <button className='uppercase w-full font-medium rounded-md text-3xl pt-3 pb-3 text-white bg-blue-500'>đặt vé</button>
+                <button className='uppercase w-full font-medium rounded-md text-3xl pt-3 pb-3 text-white bg-blue-500'
+                onClick={handleBuyTicket}
+                >đặt vé</button>
             </div>
         </>
     )
