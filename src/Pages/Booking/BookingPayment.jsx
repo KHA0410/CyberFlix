@@ -7,8 +7,6 @@ import { useNavigate } from 'react-router-dom';
 
 export default function BookingPayment({ ttPhim }) {
     let { dsGheDangDat } = useSelector(state => state.seatSlice);
-    // console.log(dsGheDangDat);
-    // console.log(ttPhim);
     let { user } = useSelector(state => state.userSlice);
     let navigate = useNavigate();
     
@@ -20,6 +18,7 @@ export default function BookingPayment({ ttPhim }) {
             icon: <CheckCircleTwoTone twoToneColor="#52c41a" style={{fontSize: "60px"}} />,
             onOk() {
                 console.log("OK");
+                navigate("/");
             },
         })
     }
