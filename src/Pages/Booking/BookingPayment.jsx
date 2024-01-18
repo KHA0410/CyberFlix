@@ -7,10 +7,11 @@ import { useNavigate } from 'react-router-dom';
 
 export default function BookingPayment({ ttPhim }) {
     let { dsGheDangDat } = useSelector(state => state.seatSlice);
-    console.log(dsGheDangDat);
-    console.log(ttPhim);
+    // console.log(dsGheDangDat);
+    // console.log(ttPhim);
     let { user } = useSelector(state => state.userSlice);
     let navigate = useNavigate();
+    
 
     // show confirm when payment 
     let showConfirm = () => {
@@ -18,10 +19,7 @@ export default function BookingPayment({ ttPhim }) {
             title: 'Đặt vé thành công !',
             icon: <CheckCircleTwoTone twoToneColor="#52c41a" style={{fontSize: "60px"}} />,
             onOk() {
-                console.log('OK');
-            },
-            onCancel() {
-                console.log('Cancel');
+                console.log("OK");
             },
         })
     }
@@ -36,10 +34,14 @@ export default function BookingPayment({ ttPhim }) {
         return { total, arrVe };
     }
 
-    let handleBuyTicket = () => {
+    let handleBuyTicket = (arrVe) => {
         if (user) {
-            // show confirm 
-            showConfirm();
+            if (arrVe.length > 0) {
+                // show confirm 
+                showConfirm();
+            } else {
+                message.warning("Vui lòng chọn ghế !");
+            }
         } else {
             localStorage.setItem("BOOKING", '/booking')
             navigate("/login")
@@ -82,7 +84,9 @@ export default function BookingPayment({ ttPhim }) {
             </div>
             <div className='payment__item'>
                 <button className='uppercase w-full font-medium rounded-md text-3xl pt-3 pb-3 text-white bg-blue-500'
-                onClick={handleBuyTicket}
+                onClick={() => {
+                    handleBuyTicket(renderThongTinVe(dsGheDangDat).arrVe);
+                }}
                 >đặt vé</button>
             </div>           
         </>
