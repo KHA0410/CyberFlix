@@ -28,8 +28,8 @@ const FormLogin = () => {
       navigate("/"); // Chuyển hướng qua homepage
     }
      //Lưu xuống localstore
-     let dataJon = JSON.stringify(res.data.content)
-     localStorage.setItem("USER_LOGIN", dataJon)
+     let dataJson = JSON.stringify(res.data.content)
+     localStorage.setItem("USER_LOGIN", dataJson)
     })
     .catch((err) => {
      console.log(err);
